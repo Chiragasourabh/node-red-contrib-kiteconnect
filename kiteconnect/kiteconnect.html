@@ -1,0 +1,440 @@
+<!-- get profile -->
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('get profile', {
+        category: "kiteconnect",
+        color: "#E9967A",
+        defaults: {
+            name: { value: "" },
+            kiteconnectConfig: {
+                type: "kiteconnect-config",
+                required: true
+            },
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-line-chart",
+        label: function () {
+            return this.name || "get profile";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="get profile">
+    <div class="form-row">
+		<label for="node-input-kiteconnectConfig"><i class="fa fa-user"></i> Config</label>
+		<input type="text" id="node-input-kiteconnectConfig">
+	</div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="get profile">
+    <p>Get user profile details.</p>
+</script>
+
+
+<!-- get positions -->
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('get positions', {
+        category: "kiteconnect",
+        color: "#E9967A",
+        defaults: {
+            name: { value: "" },
+            kiteconnectConfig: {
+                type: "kiteconnect-config",
+                required: true
+            },
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-line-chart",
+        label: function () {
+            return this.name || "get positions";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="get positions">
+    <div class="form-row">
+		<label for="node-input-kiteconnectConfig"><i class="fa fa-user"></i> Config</label>
+		<input type="text" id="node-input-kiteconnectConfig">
+	</div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="get positions">
+    <p>Retrieve positions.</p>
+</script>
+
+
+<!-- get holdings -->
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('get holdings', {
+        category: "kiteconnect",
+        color: "#E9967A",
+        defaults: {
+            name: { value: "" },
+            kiteconnectConfig: {
+                type: "kiteconnect-config",
+                required: true
+            },
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-line-chart",
+        label: function () {
+            return this.name || "get holdings";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="get holdings">
+    <div class="form-row">
+		<label for="node-input-kiteconnectConfig"><i class="fa fa-user"></i> Config</label>
+		<input type="text" id="node-input-kiteconnectConfig">
+	</div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="get holdings">
+    <p>Retrieve the list of equity holdings.</p>
+</script>
+
+
+<!-- get margins -->
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('get margins', {
+        category: "kiteconnect",
+        color: "#E9967A",
+        defaults: {
+            name: { value: "" },
+            kiteconnectConfig: {
+                type: "kiteconnect-config",
+                required: true
+            },
+            segment: { value: "equity" }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-line-chart",
+        label: function () {
+            return this.name || "get margins";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="get margins">
+    <div class="form-row">
+		<label for="node-input-kiteconnectConfig"><i class="fa fa-user"></i> Config</label>
+		<input type="text" id="node-input-kiteconnectConfig">
+	</div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Segment</label>
+        <select id="node-input-segment" placeholder="Segment">
+            <option value="equity">Equity</option>
+            <option value="commodity">Commodity</option>
+        </select>
+        <br />
+        <small style="padding-left: 100px;">Incoming <code>.segment</code> overwrites this value</small>
+        <br />
+        <small style="padding-left: 100px;">"equity" | "commodity"</small>
+    </div>
+
+</script>
+
+<script type="text/html" data-help-name="get margins">
+    <p>Get account balance and cash margin details for a particular segment.</p>
+</script>
+
+
+<!-- get orders -->
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('get orders', {
+        category: "kiteconnect",
+        color: "#E9967A",
+        defaults: {
+            name: { value: "" },
+            kiteconnectConfig: {
+                type: "kiteconnect-config",
+                required: true
+            },
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-line-chart",
+        label: function () {
+            return this.name || "get orders";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="get orders">
+    <div class="form-row">
+		<label for="node-input-kiteconnectConfig"><i class="fa fa-user"></i> Config</label>
+		<input type="text" id="node-input-kiteconnectConfig">
+	</div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="get orders">
+    <p>Get list of orders.</p>
+</script>
+
+
+<!-- get order trades -->
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('get order trades', {
+        category: "kiteconnect",
+        color: "#E9967A",
+        defaults: {
+            name: { value: "" },
+            kiteconnectConfig: {
+                type: "kiteconnect-config",
+                required: true
+            },
+            order_id: { value: ""}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-line-chart",
+        label: function () {
+            return this.name || "get order trades";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="get order trades">
+    <div class="form-row">
+		<label for="node-input-kiteconnectConfig"><i class="fa fa-user"></i> Config</label>
+		<input type="text" id="node-input-kiteconnectConfig">
+	</div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-order_id"><i class="fa fa-tag"></i> Order id</label>
+        <input type="text" id="node-input-order_id" placeholder="Order id">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="get order trades">
+    <p>Retrieve the list of trades in a particular order. An order can be executed in tranches based on market conditions. These trades are individually recorded under an order.</p>
+</script>
+
+
+<!-- place order -->
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('place order', {
+        category: "kiteconnect",
+        color: "#E9967A",
+        defaults: {
+            name: { value: "" },
+            kiteconnectConfig: {
+                type: "kiteconnect-config",
+                required: true
+            },
+            variety: { value: "regular"},
+            exchange: { value: "NSE"},
+            tradingsymbol: { value: ""},
+            transaction_type: { value: "BUY"},
+            quantity: { value: ""},
+            product: { value: "MIS"},
+            order_type: { value: "MARKET"}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-line-chart",
+        label: function () {
+            return this.name || "place order";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="place order">
+    <div class="form-row">
+		<label for="node-input-kiteconnectConfig"><i class="fa fa-user"></i> Config</label>
+		<input type="text" id="node-input-kiteconnectConfig">
+	</div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Variety</label>
+        <select id="node-input-variety" placeholder="Variety">
+            <option value="regular">REGULAR</option>
+            <option value="bo">BO</option>
+            <option value="co">CO</option>
+            <option value="amo">AMO</option>
+        </select>
+        <br />
+        <small style="padding-left: 100px;">Incoming <code>.variety</code> overwrites this value</small>
+        <br />
+        <small style="padding-left: 100px;">"regular" | "bo" | "co" | "amo"</small>
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Exchange</label>
+        <select id="node-input-exchange" placeholder="Exchange">
+            <option value="NSE">NSE</option>
+            <option value="BSE">BSE</option>
+            <option value="NFO">NFO</option>
+            <option value="BFO">BFO</option>
+            <option value="CDS">CDS</option>
+            <option value="MCX">MCX</option>
+        </select>
+        <br />
+        <small style="padding-left: 100px;">Incoming <code>.exchange</code> overwrites this value</small>
+        <br />
+        <small style="padding-left: 100px;">"NSE" | "BSE" | "NFO" | "BFO" | "CDS" | "MCX"</small>
+    </div>
+    <div class="form-row">
+        <label for="node-input-tradingsymbol"><i class="fa fa-tag"></i> Trading symbol</label>
+        <input type="text" id="node-input-tradingsymbol" placeholder="(ex. RELIANCE, INFY)">
+        <br />
+        <small style="padding-left: 100px;">Incoming <code>.tradingsymbol</code> overwrites this value</small>
+    </div>
+    <div class="form-row">
+        <label for="node-input-transaction_type"><i class="fa fa-tag"></i> Transaction type</label>
+        <select id="node-input-transaction_type" placeholder="Transaction type">
+            <option value="BUY">BUY</option>
+            <option value="SELL">SELL</option>
+        </select>
+        <br />
+        <small style="padding-left: 100px;">Incoming <code>.transaction_type</code> overwrites this value</small>
+        <br />
+        <small style="padding-left: 100px;">"BUY" | "SELL"</small>
+    </div>
+    <div class="form-row">
+        <label for="node-input-quantity"><i class="fa fa-tag"></i> Quantity</label>
+        <input type="number" id="node-input-quantity" placeholder="Quantity">
+        <br />
+        <small style="padding-left: 100px;">Incoming <code>.quantity</code> overwrites this value</small>
+    </div>
+    <div class="form-row">
+        <label for="node-input-product"><i class="fa fa-tag"></i> Product code</label>
+        <select id="node-input-product" placeholder="Product code">
+            <option value="MIS">MIS</option>
+            <option value="CNC">CNC</option>
+            <option value="NRML">NRML</option>
+        </select>
+        <br />
+        <small style="padding-left: 100px;">Incoming <code>.product</code> overwrites this value</small>
+        <br />
+        <small style="padding-left: 100px;">"MIS" | "CNC" | "NRML"</small>
+    </div>
+    <div class="form-row">
+        <label for="node-input-order_type"><i class="fa fa-tag"></i> Order type</label>
+        <select id="node-input-order_type" placeholder="Order type">
+            <option value="MARKET">MARKET</option>
+            <option value="NRML">LIMIT</option>
+            <option value="SL">SL</option>
+            <option value="SL-M">SL-M</option>
+        </select>
+        <br />
+        <small style="padding-left: 100px;">Incoming <code>.order_type</code> overwrites this value</small>
+        <br />
+        <small style="padding-left: 100px;">"MARKET" | "LIMIT" | "SL" | "SL-M"</small>
+    </div>
+</script>
+
+<script type="text/html" data-help-name="place order">
+    <p>Place an order.</p>
+</script>
+
+
+<!-- cancel order -->
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('cancel order', {
+        category: "kiteconnect",
+        color: "#E9967A",
+        defaults: {
+            name: { value: "" },
+            kiteconnectConfig: {
+                type: "kiteconnect-config",
+                required: true
+            },
+            variety: { value: "regular"},
+            order_id: { value: ""},
+            parent_order_id: { value: ""}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-line-chart",
+        label: function () {
+            return this.name || "cancel order";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="cancel order">
+    <div class="form-row">
+		<label for="node-input-kiteconnectConfig"><i class="fa fa-user"></i> Config</label>
+		<input type="text" id="node-input-kiteconnectConfig">
+	</div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Variety</label>
+        <select id="node-input-variety" placeholder="Variety">
+            <option value="regular">REGULAR</option>
+            <option value="bo">BO</option>
+            <option value="co">CO</option>
+            <option value="amo">AMO</option>
+        </select>
+        <br />
+        <small style="padding-left: 100px;">Incoming <code>.variety</code> overwrites this value</small>
+        <br />
+        <small style="padding-left: 100px;">"regular" | "bo" | "co" | "amo"</small>
+    </div>
+    <div class="form-row">
+        <label for="node-input-order_id"><i class="fa fa-tag"></i> Order id</label>
+        <input type="text" id="node-input-order_id" placeholder="Order id">
+        <br />
+        <small style="padding-left: 100px;">Incoming <code>.order_id</code> overwrites this value</small>
+    </div>
+    <div class="form-row">
+        <label for="node-input-parent_order_id"><i class="fa fa-tag"></i> Parent Order id</label>
+        <input type="text" id="node-input-parent_order_id" placeholder="Parent order id">
+        <br />
+        <small style="padding-left: 100px;">Incoming <code>.parent_order_id</code> overwrites this value</small>
+    </div>
+</script>
+
+<script type="text/html" data-help-name="cancel order">
+    <p>Cancel an order.</p>
+</script>

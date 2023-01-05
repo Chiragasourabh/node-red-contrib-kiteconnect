@@ -1,0 +1,30 @@
+{
+    "name": "node-red-contrib-kiteconnect",
+    "dependencies": {
+        "kiteconnect": "4.0.1"
+      },
+    "repository": { 
+        "type": "git", 
+        "url": "git+https://github.com/chiragasourabh/node-red-contrib-kiteconnect" 
+        },
+    "description": "Nodes for connecting to the Kite Connect APIs.",
+    "keywords": [
+        "node-red",
+        "kite",
+        "kiteconnect",
+        "stock",
+        "trading"
+      ],
+    "author": {
+        "name": "Chiragasourabh",
+        "email": "chiragasourabh@gmail.com"
+      },
+    "license": "MIT",
+    "node-red": {
+        "nodes": {
+            "kiteconnect": "kiteconnect/kiteconnect.js",
+            "kiteconnect-config": "kiteconnect/config/kiteconnect_config.js"
+        }
+    },
+    "version": "0.0.1"
+}
