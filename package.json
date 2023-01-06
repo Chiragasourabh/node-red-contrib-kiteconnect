@@ -4,13 +4,13 @@
     "description": "Nodes for connecting to the Kite Connect APIs.",
     "dependencies": {
         "kiteconnect": "4.0.1"
-      },
-    "repository": { 
-        "type": "git", 
-        "url": "git+https://github.com/chiragasourabh/node-red-contrib-kiteconnect" 
-        },
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/chiragasourabh/node-red-contrib-kiteconnect"
+    },
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 0"
     },
     "keywords": [
         "node-red",
@@ -18,11 +18,11 @@
         "kiteconnect",
         "stock",
         "trading"
-      ],
+    ],
     "author": {
         "name": "Chiragasourabh",
         "email": "chiragasourabh@gmail.com"
-      },
+    },
     "license": "MIT",
     "node-red": {
         "nodes": {
