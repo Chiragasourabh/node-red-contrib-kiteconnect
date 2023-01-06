@@ -8,6 +8,7 @@ module.exports = function (RED) {
 			debug: true
 		});
 
+		console.log(this.kc.getLoginURL());
 		this.kc.generateSession(this.credentials.request_token, this.credentials.api_secret)
 			.then(function (response) {
 				console.log("Response", response);
